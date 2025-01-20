@@ -193,6 +193,8 @@ body {
   overflow: hidden;
   -o-object-fit: cover;
      object-fit: cover;
+  border: none;
+  outline: none;
 }
 .our-stories__item-frame iframe::-webkit-scrollbar {
   display: none;
