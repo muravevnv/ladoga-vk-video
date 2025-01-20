@@ -50,6 +50,7 @@ body {
       align-items: center;
       justify-content: center;
       z-index: 3;
+      transition: 0.25s ease-in-out;
 
       svg {
         display: block;
@@ -62,7 +63,7 @@ body {
           background-color: #B3BE60;
   
           svg path {
-            fill: #FFF;
+            stroke: #FFF;
           }
         }
       }
@@ -129,6 +130,13 @@ body {
     flex-direction: column;
     align-items: flex-start;
 
+    &.is-active {
+
+      .our-stories__item-preview {
+        display: none;
+      }
+    }
+
     &-main {
       position: relative;
       width: 100%;
@@ -143,6 +151,18 @@ body {
       width: 100%;
       height: 100%;
       z-index: 2;
+
+      @media(any-hover: hover) {
+        &:hover {
+          .our-stories__item-preview-btn {
+            background-color: #B3BE60;
+
+            svg path {
+              fill: #FFF;
+            }
+          }
+        }
+      }
 
       &-img {
         display: block;
@@ -172,16 +192,8 @@ body {
         border: none;
         outline: none;
         cursor: pointer;
-
-        @media(any-hover: hover) {
-          &:hover {
-            background-color: #B3BE60;
-  
-            svg path {
-              fill: #FFF;
-            }
-          }
-        }
+        pointer-events: none;
+        transition: 0.25s ease-in-out;
       }
     }
 
