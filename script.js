@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   if (document.querySelector(".js-our-stories-slider")) {
     const ourStoriesSlider = new Swiper(".js-our-stories-slider", {
-      slidesPerView: 1.03,
+      slidesPerView: 'auto',
       spaceBetween: 10,
       navigation: {
         nextEl: ".js-our-stories-slider-next",
