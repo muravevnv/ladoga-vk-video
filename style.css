@@ -160,8 +160,8 @@ body {
 }
 .our-stories__item-preview-btn {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 50%;
+  left: 50%;
   width: 40px;
   height: 40px;
   background-color: #FFF;
@@ -175,6 +175,7 @@ body {
   cursor: pointer;
   pointer-events: none;
   transition: 0.25s ease-in-out;
+  transform: translate(-50%, -50%);
 }
 .our-stories__item-frame {
   position: relative;
