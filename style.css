@@ -111,7 +111,7 @@ body {
 }
 @media screen and (max-width: 767px) {
   .our-stories__section--wide {
-    width: 100%;
+    max-width: 255px;
   }
 }
 .our-stories__item {
