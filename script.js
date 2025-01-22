@@ -26,6 +26,22 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+
+document.querySelectorAll('.js-iframe-mask').forEach(function(mask) {
+  mask.addEventListener('mouseenter', function() {
+    setTimeout(function() {
+      mask.style.pointerEvents = 'none';
+    }, 1000);
+     // Отключаем маску для пропуска касания в iframe
+  });
+
+  mask.addEventListener('mouseleave', function() {
+    setTimeout(function() {
+      mask.style.pointerEvents = 'auto'; // Включаем маску обратно после взаимодействия
+    }, 1000); // Небольшая задержка
+  });
+});
+
 document.querySelectorAll('.js-iframe-mask').forEach(function(mask) {
   mask.addEventListener('touchstart', function() {
     mask.style.pointerEvents = 'none'; // Отключаем маску для пропуска касания в iframe
