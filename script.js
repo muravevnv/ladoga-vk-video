@@ -26,6 +26,18 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+document.querySelectorAll('.js-iframe-mask').forEach(function(mask) {
+  mask.addEventListener('touchstart', function() {
+    mask.style.pointerEvents = 'none'; // Отключаем маску для пропуска касания в iframe
+  });
+
+  mask.addEventListener('touchend', function() {
+    setTimeout(function() {
+      mask.style.pointerEvents = 'auto'; // Включаем маску обратно после взаимодействия
+    }, 500); // Небольшая задержка
+  });
+});
+
 // const storiesItems = document.querySelectorAll('.our-stories__item');
 
 // if(storiesItems.length > 0) {
@@ -43,3 +55,5 @@ document.addEventListener("DOMContentLoaded", () => {
 //     });
 //   })
 // }
+
+
