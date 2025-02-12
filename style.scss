@@ -6,11 +6,10 @@
   src: url('./fonts/Catallina.otf');
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
+   font-display: swap;
 }
 
-*,
-html {
+*, html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -62,7 +61,7 @@ body {
       @media(any-hover: hover) {
         &:hover {
           background-color: #B3BE60;
-
+  
           svg path {
             stroke: #FFF;
           }
@@ -123,7 +122,7 @@ body {
       }
     }
   }
-
+  
   &__item {
     width: 100%;
     height: 100%;
@@ -139,7 +138,7 @@ body {
     }
 
     // &:hover {
-
+      
     //   .our-stories__item-frame-mask {
     //     pointer-events: none;
     //   }
@@ -213,9 +212,6 @@ body {
       top: 0;
       left: 0;
       z-index: 10;
-      display: none;
-
-
     }
 
     &-frame {
@@ -224,16 +220,6 @@ body {
       height: 100%;
       border-radius: 16px;
       overflow: hidden;
-
-      &::after {
-        content: "";
-        background: transparent;
-        width: 100%;
-        height: 100%;
-        min-height: 1px;
-        position: absolute;
-        top: 0;
-      }
 
       &::-webkit-scrollbar {
         display: none;
@@ -275,7 +261,7 @@ body {
       margin-bottom: 10px;
       flex-shrink: 0;
       margin-top: 30px;
-
+      
       @media screen and (max-width: 767px) {
         display: none;
       }
@@ -286,7 +272,7 @@ body {
       line-height: 1.2;
       color: #6E6E6E;
       flex-shrink: 0;
-
+      
       @media screen and (max-width: 767px) {
         display: none;
       }
